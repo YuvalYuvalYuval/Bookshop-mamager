@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Rubik:wght@300&display=swap');
+
+
+body {
+    background-image: url("https://www.transparenttextures.com/patterns/cardboard.png");
+    font-family: 'Roboto', sans-serif;
+}
+
+.book-modal {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    border-radius: .5rem;
+}
+
+.book-modal img {
+    width: 9rem;
+    display: block;
+    margin: 2% auto;
+}
+
+.book-rating {
+    width: 55%;
+    border-radius: .5rem;
+    margin: auto;
+}
+
+.shown {
+    display: block;
+}
+
+body.rtl {
+    direction: rtl;
+}
+
+.he {
+    font-family: 'Rubik', sans-serif;
+}
