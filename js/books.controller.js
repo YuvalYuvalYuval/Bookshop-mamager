@@ -43,14 +43,14 @@ function onRemoveBook(bookId) {
 function onCreateNewBook() {
     var name = gCurrLang === 'he' ? prompt('הזן את שם הספר') : prompt('Enter book title')
     if (name) var price = gCurrLang === 'he' ? +prompt(`הזן מחיר בדולרים עבור: ${name}`) : +prompt(`Enter a price for the book: ${name} (USD)`)
-    if (!isNaN(price)) addBook(name, price)
+    if (price) addBook(name, price)
     renderBooks()
 }
 
 function onUpdateBook(bookId) {
     var book = getBookById(bookId)
     var price = gCurrLang === 'he' ? +prompt(`הזן מחיר בדולרים עבור: ${book.name}`) : +prompt(`Enter a price for the book: ${name} (USD)`)
-    if (isNaN(price)) return;
+    if (!price) return;
     updateBook(book, price);
     renderBooks()
 }
