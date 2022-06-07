@@ -49,7 +49,7 @@ function onCreateNewBook() {
 
 function onUpdateBook(bookId) {
     var book = getBookById(bookId)
-    var price = gCurrLang === 'he' ? +prompt(`הזן מחיר בדולרים עבור: ${book.name}`) : +prompt(`Enter a price for the book: ${name} (USD)`)
+    var price = gCurrLang === 'he' ? +prompt(`הזן מחיר בדולרים עבור: ${book.name}`) : +prompt(`Enter a price for the book: ${book.name} (USD)`)
     if (!price) return;
     updateBook(book, price);
     renderBooks()
